@@ -10,7 +10,11 @@ from .api import artists, intelligence
 async def lifespan(app: FastAPI):
     """Application lifespan manager"""
     # Startup
-    await init_db()
+    if settings.database_url and "postgresql" in settings.database_url:
+            await init_db()
+            print("Database initialized")
+        else:
+            print("Database skipped - not configured")
     yield
     # Shutdown
     await close_db()
