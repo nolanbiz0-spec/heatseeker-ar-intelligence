@@ -87,4 +87,4 @@ REDIS_URL=redis://localhost:6379/0
 - `GET /api/intelligence/artist-report/{id}` - Deep-dive analysis
 - `GET /api/intelligence/trending` - Cross-platform trending analysis
 
-Built for A&R professionals at Interscope/UMG. Direct, actionable intelligence without the fluff.
+Built for A&R professionals at Interscope/UMG. Direct, actionable intelligence without the fluff.# Enhanced A&R Intelligence Platform with full diagnostics and testing capabilities
