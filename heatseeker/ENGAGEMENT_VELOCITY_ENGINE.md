@@ -23,8 +23,13 @@ import json
 
 class EngagementVelocityTracker:
     """
-    Track Instagram comment velocity for A&R intelligence
-    Identifies artists with 500+ comments/hour = superfan indicators
+    Track INSTAGRAM-SPECIFIC comment velocity for A&R intelligence
+    
+    CRITICAL SPECIFICATION:
+    - INSTAGRAM ONLY - not cross-platform aggregation
+    - 500+ comments within first hour AFTER they post on Instagram
+    - Real-time monitoring of individual Instagram posts
+    - Measures community response speed on single platform
     """
     
     def __init__(self, instagram_api_key):
