@@ -39,23 +39,29 @@ class TastemakerMonitor:
                 "focus": "Music scene current events & viral moments", 
                 "weight": 2.0,
                 "url": "https://x.com/beforeikrash"
+            },
+            "kashermike": {
+                "handle": "@kashermike",
+                "focus": "Music industry insights & artist discoveries",
+                "weight": 2.0,
+                "url": "https://x.com/kashermike"
             }
         }
         
         # A&R-focused search queries for tastemaker posts
         self.tastemaker_queries = [
             # Direct mentions of discovery
-            'from:yeenballin OR from:3trilll OR from:beforeikrash ("new artist" OR "unsigned" OR "independent") -is:retweet',
-            'from:yeenballin OR from:3trilll OR from:beforeikrash ("viral" OR "blew up" OR "going crazy") -is:retweet',
-            'from:yeenballin OR from:3trilll OR from:beforeikrash ("fire" OR "heat" OR "hard") (artist OR song) -is:retweet',
+            'from:yeenballin OR from:3trilll OR from:beforeikrash OR from:kashermike ("new artist" OR "unsigned" OR "independent") -is:retweet',
+            'from:yeenballin OR from:3trilll OR from:beforeikrash OR from:kashermike ("viral" OR "blew up" OR "going crazy") -is:retweet',
+            'from:yeenballin OR from:3trilll OR from:beforeikrash OR from:kashermike ("fire" OR "heat" OR "hard") (artist OR song) -is:retweet',
             
             # Industry intelligence  
-            'from:yeenballin OR from:3trilll OR from:beforeikrash ("A&R" OR "label" OR "signed") -is:retweet',
-            'from:yeenballin OR from:3trilll OR from:beforeikrash ("TikTok" OR "trending" OR "charts") -is:retweet',
+            'from:yeenballin OR from:3trilll OR from:beforeikrash OR from:kashermike ("A&R" OR "label" OR "signed") -is:retweet',
+            'from:yeenballin OR from:3trilll OR from:beforeikrash OR from:kashermike ("TikTok" OR "trending" OR "charts") -is:retweet',
             
             # Scene monitoring
-            'from:yeenballin OR from:3trilll OR from:beforeikrash ("Atlanta" OR "NYC" OR "LA" OR "Chicago") (music OR scene) -is:retweet',
-            'from:yeenballin OR from:3trilll OR from:beforeikrash ("rage rap" OR "drill" OR "bedroom pop" OR "experimental") -is:retweet'
+            'from:yeenballin OR from:3trilll OR from:beforeikrash OR from:kashermike ("Atlanta" OR "NYC" OR "LA" OR "Chicago") (music OR scene) -is:retweet',
+            'from:yeenballin OR from:3trilll OR from:beforeikrash OR from:kashermike ("rage rap" OR "drill" OR "bedroom pop" OR "experimental") -is:retweet'
         ]
     
     async def get_tastemaker_posts(self, query):
@@ -136,7 +142,7 @@ class TastemakerMonitor:
         """Monitor all tastemaker accounts for A&R intelligence"""
         print(f"\n🎯 TASTEMAKER A&R INTELLIGENCE SCAN - {datetime.now().strftime('%H:%M:%S')}")
         print("=" * 55)
-        print("👥 Monitoring: @yeenballin, @3trilll, @beforeikrash")
+        print("👥 Monitoring: @yeenballin, @3trilll, @beforeikrash, @kashermike")
         print()
         
         discoveries = []

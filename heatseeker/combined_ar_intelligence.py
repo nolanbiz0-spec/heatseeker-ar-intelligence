@@ -25,7 +25,8 @@ class CombinedARIntelligence:
         self.tastemakers = {
             "yeenballin": {"weight": 2.5, "focus": "Breaking artists & scene events"},
             "3trilll": {"weight": 2.0, "focus": "Artist discoveries & discussions"}, 
-            "beforeikrash": {"weight": 2.0, "focus": "Viral moments & current events"}
+            "beforeikrash": {"weight": 2.0, "focus": "Viral moments & current events"},
+            "kashermike": {"weight": 2.0, "focus": "Music industry insights & discoveries"}
         }
         
         # Combined monitoring queries
@@ -35,8 +36,8 @@ class CombinedARIntelligence:
                 '("TikTok viral" OR "viral on TikTok") ("unsigned" OR "independent") -is:retweet'
             ],
             "tastemaker_signals": [
-                'from:yeenballin OR from:3trilll OR from:beforeikrash ("new artist" OR "unsigned" OR "fire") -is:retweet',
-                'from:yeenballin OR from:3trilll OR from:beforeikrash ("viral" OR "A&R" OR "label") -is:retweet'
+                'from:yeenballin OR from:3trilll OR from:beforeikrash OR from:kashermike ("new artist" OR "unsigned" OR "fire") -is:retweet',
+                'from:yeenballin OR from:3trilll OR from:beforeikrash OR from:kashermike ("viral" OR "A&R" OR "label") -is:retweet'
             ],
             "engagement_velocity": [
                 '("500 comments" OR "comments going crazy") ("artist" OR "song") -is:retweet',
@@ -216,7 +217,7 @@ class CombinedARIntelligence:
         print("🚀 COMBINED A&R INTELLIGENCE - LIVE MONITORING")
         print("=" * 60)
         print("🎯 General viral discovery + tastemaker intelligence")
-        print("👥 Tastemakers: @yeenballin (2.5x), @3trilll (2.0x), @beforeikrash (2.0x)")
+        print("👥 Tastemakers: @yeenballin (2.5x), @3trilll (2.0x), @beforeikrash (2.0x), @kashermike (2.0x)")
         print("📊 Categories: Viral Discovery, Tastemaker Signals, Engagement Velocity,")
         print("              Competitive Intel, Post-Ken Carson Opportunities")
         print("⚡ 15-minute comprehensive monitoring cycles")
