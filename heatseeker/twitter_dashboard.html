@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Twitter A&R Intelligence Dashboard</title>
+    <style>
+        body { font-family: 'SF Pro Display', -apple-system, sans-serif; background: #0a0a0a; color: #fff; margin: 0; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+        .header { text-align: center; margin-bottom: 40px; }
+        .header h1 { font-size: 2.5em; margin: 0; background: linear-gradient(45deg, #1DA1F2, #00D4FF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .monitoring-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 20px; margin-bottom: 40px; }
+        .monitoring-card { background: #1a1a1a; border-radius: 12px; padding: 20px; border: 1px solid #333; }
+        .monitoring-card h3 { color: #1DA1F2; margin-top: 0; }
+        .viral-alert { background: linear-gradient(135deg, #ff6b6b, #ee5a24); color: white; padding: 15px; border-radius: 8px; margin: 10px 0; }
+        .viral-alert.urgent { animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(238, 90, 36, 0.7); } 70% { box-shadow: 0 0 0 10px rgba(238, 90, 36, 0); } 100% { box-shadow: 0 0 0 0 rgba(238, 90, 36, 0); } }
+        .search-query { background: #2a2a2a; padding: 10px; border-radius: 6px; margin: 8px 0; font-family: monospace; font-size: 0.9em; border-left: 3px solid #1DA1F2; }
+        .confidence-bar { background: #333; height: 8px; border-radius: 4px; overflow: hidden; margin: 5px 0; }
+        .confidence-fill { background: linear-gradient(90deg, #00D4FF, #1DA1F2); height: 100%; transition: width 0.3s ease; }
+        .geographic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+        .geo-hotspot { background: #2a2a2a; padding: 15px; border-radius: 8px; border: 1px solid #444; }
+        .geo-hotspot h4 { margin-top: 0; color: #00D4FF; }
+        .status-indicator { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 8px; }
+        .status-live { background: #2ecc71; animation: pulse-green 2s infinite; }
+        @keyframes pulse-green { 0% { box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.7); } 70% { box-shadow: 0 0 0 10px rgba(46, 204, 113, 0); } 100% { box-shadow: 0 0 0 0 rgba(46, 204, 113, 0); } }
+        .ken-carson-context { background: linear-gradient(135deg, #8e44ad, #c0392b); padding: 20px; border-radius: 12px; margin-bottom: 20px; }
+        .artist-discovery { background: #1e3a8a; padding: 15px; border-radius: 8px; margin: 10px 0; border-left: 4px solid #3b82f6; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🐦 Twitter A&R Intelligence</h1>
+            <p>Real-time viral artist discovery and breakthrough monitoring</p>
+            <p><span class="status-indicator status-live"></span>Live monitoring active | Last update: 30 seconds ago</p>
+        </div>
+        
+        <div class="ken-carson-context">
+            <h3>🔥 Market Context: Ken Carson Album Drop (Yesterday)</h3>
+            <p><strong>A&R Opportunity:</strong> Rage rap genre validation creates window for unsigned similar acts</p>
+            <p><strong>Strategy:</strong> Monitor for Ken Carson-influenced but original unsigned artists</p>
+            <p><strong>Timeline:</strong> Strike while genre heat is high, before competition intensifies</p>
+        </div>
+        
+        <div class="viral-alert urgent">
+            <h3>🚨 URGENT VIRAL ALERT</h3>
+            <p><strong>Luna Martinez (@lunamartinezmusic)</strong> - Bedroom Pop</p>
+            <p>"yo my song just hit 500K on TikTok overnight this is insane 😭"</p>
+            <div class="confidence-bar"><div class="confidence-fill" style="width: 85%"></div></div>
+            <p>Confidence: 85% | Status: UNSIGNED | Action: IMMEDIATE CONTACT (24hr window)</p>
+        </div>
+        
+        <div class="artist-discovery">
+            <h4>⚡ High Priority Discovery</h4>
+            <p><strong>Digital Phantom (@digitalphantomprod)</strong> - Experimental Trap</p>
+            <p>"50K followers, still no label... keeping it independent for now"</p>
+            <p>Confidence: 72% | Status: INDEPENDENT | Timeline: Fast growth trajectory</p>
+        </div>
+        
+        <div class="monitoring-grid">
+            <div class="monitoring-card">
+                <h3>🔥 Viral Moment Detection</h3>
+                <div class="search-query">"my song went viral" OR "going viral"</div>
+                <div class="search-query">"TikTok viral" OR "blew up overnight"</div>
+                <div class="search-query">"unsigned artist" OR "independent"</div>
+                <div class="search-query">"bedroom producer" OR "home studio"</div>
+                <p><strong>Active Monitoring:</strong> 15-minute refresh intervals</p>
+                <p><strong>Discoveries Today:</strong> 3 viral moments, 1 urgent</p>
+            </div>
+            
+            <div class="monitoring-card">
+                <h3>📊 Engagement Velocity Tracking</h3>
+                <div class="search-query">"500 comments" OR "comments going crazy"</div>
+                <div class="search-query">"notifications won't stop"</div>
+                <div class="search-query">"followers jumped" OR "overnight growth"</div>
+                <div class="search-query">"DMs flooded" OR "phone blowing up"</div>
+                <p><strong>Target:</strong> Artists reporting sudden engagement spikes</p>
+                <p><strong>Alert Threshold:</strong> 500+ comments/hour mentions</p>
+            </div>
+            
+            <div class="monitoring-card">
+                <h3>🎯 Genre Trend Monitoring (Post-Ken Carson)</h3>
+                <div class="search-query">"rage rap" OR "experimental trap"</div>
+                <div class="search-query">"opium sound" OR "ken carson type"</div>
+                <div class="search-query">"bedroom pop" OR "indie sleaze"</div>
+                <div class="search-query">"hyperpop" OR "digicore"</div>
+                <p><strong>Focus:</strong> Ken Carson influence without copying</p>
+                <p><strong>Discoveries:</strong> 2 rage rap unsigned prospects</p>
+            </div>
+            
+            <div class="monitoring-card">
+                <h3>🏢 Industry Signal Detection</h3>
+                <div class="search-query">"A&R reached out" OR "label interest"</div>
+                <div class="search-query">"just got signed" OR "record deal"</div>
+                <div class="search-query">"management" OR "booking agent"</div>
+                <div class="search-query">"3 A&Rs in my DMs" competitive alerts</div>
+                <p><strong>Intelligence:</strong> Competitive situation monitoring</p>
+                <p><strong>Alerts Today:</strong> 1 competitive bidding situation</p>
+            </div>
+        </div>
+        
+        <div class="monitoring-card">
+            <h3>🌍 Geographic Discovery Hotspots</h3>
+            <div class="geographic-grid">
+                <div class="geo-hotspot">
+                    <h4>🔥 Atlanta Scene</h4>
+                    <div class="search-query">#ATLmusic #ATLunderground</div>
+                    <p>Monitoring: Rage rap post-Ken Carson</p>
+                    <p>Discoveries: 3 unsigned producers</p>
+                </div>
+                <div class="geo-hotspot">
+                    <h4>🎵 NYC Underground</h4>
+                    <div class="search-query">#NYCindiemusic #BKscene</div>
+                    <p>Monitoring: Indie/experimental</p>
+                    <p>Discoveries: 2 bedroom pop artists</p>
+                </div>
+                <div class="geo-hotspot">
+                    <h4>☀️ LA Bedroom Pop</h4>
+                    <div class="search-query">#LAmusic #bedroompopLA</div>
+                    <p>Monitoring: Indie sleaze revival</p>
+                    <p>Discoveries: 1 viral breakthrough</p>
+                </div>
+                <div class="geo-hotspot">
+                    <h4>🇬🇧 UK Scenes</h4>
+                    <div class="search-query">#UKdrill #Londonmusic</div>
+                    <p>Monitoring: Drill/grime crossover</p>
+                    <p>Discoveries: 2 unsigned drill artists</p>
+                </div>
+                <div class="geo-hotspot">
+                    <h4>🇨🇦 Toronto Sound</h4>
+                    <div class="search-query">#TOmusic #6ixunderground</div>
+                    <p>Monitoring: Drake-influence ecosystem</p>
+                    <p>Discoveries: 1 R&B prospect</p>
+                </div>
+                <div class="geo-hotspot">
+                    <h4>🌊 Miami Bass</h4>
+                    <div class="search-query">#MiamiMusic #305scene</div>
+                    <p>Monitoring: Latin trap fusion</p>
+                    <p>Discoveries: 2 reggaeton-influenced</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="monitoring-card">
+            <h3>⚡ Real-Time Discovery Feed</h3>
+            <div style="background: #111; padding: 15px; border-radius: 8px; font-family: monospace; font-size: 0.9em; max-height: 300px; overflow-y: auto;">
+                <div style="color: #2ecc71; margin-bottom: 10px;">14:32 → @lunamartinezmusic: "yo my song just hit 500K on tiktok overnight this is insane 😭"</div>
+                <div style="color: #f39c12; margin-bottom: 10px;">14:28 → @digitalphantomprod: "50K followers, still no label... keeping it independent for now"</div>
+                <div style="color: #e74c3c; margin-bottom: 10px;">14:25 → @indieartistnyc: "3 A&Rs in my DMs this week... what do I do???"</div>
+                <div style="color: #3498db; margin-bottom: 10px;">14:20 → @rageproducer: "ken carson album got everyone making rage beats now 🔥"</div>
+                <div style="color: #9b59b6; margin-bottom: 10px;">14:15 → @bedroombeats: "can't believe my beat is on the radio... still unsigned lol"</div>
+                <div style="color: #1abc9c; margin-bottom: 10px;">14:10 → @neonvoid999: "inspired by opium sound but making it my own... no label yet"</div>
+            </div>
+            <p><strong>Live Feed:</strong> Auto-refreshing every 2 minutes | <strong>Filter:</strong> Viral + unsigned mentions</p>
+        </div>
+        
+        <div class="monitoring-card">
+            <h3>🎯 Immediate Action Items</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px;">
+                <div class="viral-alert">
+                    <h4>PRIORITY 1: Luna Martinez</h4>
+                    <p>500K TikTok overnight | Unsigned | 24hr window</p>
+                    <p><strong>Action:</strong> Immediate contact via Instagram/email</p>
+                </div>
+                <div class="artist-discovery">
+                    <h4>PRIORITY 2: Digital Phantom</h4>
+                    <p>50K followers, experimental trap | Independent</p>
+                    <p><strong>Action:</strong> Schedule discovery call this week</p>
+                </div>
+                <div style="background: #d35400; padding: 15px; border-radius: 8px;">
+                    <h4>COMPETITIVE INTEL: @indieartistnyc</h4>
+                    <p>3 A&Rs already interested | Decision point</p>
+                    <p><strong>Action:</strong> Competitive offer if fits roster</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Auto-refresh every 2 minutes
+        setTimeout(function() {
+            location.reload();
+        }, 120000);
+        
+        // Simulate real-time updates
+        setInterval(function() {
+            const timestamp = new Date().toLocaleTimeString();
+            document.querySelector('.header p:last-child').innerHTML = 
+                '<span class="status-indicator status-live"></span>Live monitoring active | Last update: ' + timestamp;
+        }, 30000);
+    </script>
+</body>
+</html>
