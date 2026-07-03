@@ -93,3 +93,6 @@ Built for A&R professionals at Interscope/UMG. Direct, actionable intelligence w
 # Production A&R Intelligence Platform
 Deployed at: https://heatseeker-ar-intelligence-production.up.railway.app
 
+ 
+# Testing live A&R intelligence with real streaming data
+
